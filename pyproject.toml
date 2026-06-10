@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dhvaniguard"
+version = "0.1.0"
+description = "Code-mixed-aware prompt-injection guardrail for Indian voice agents — catches attacks in Hinglish/Indic speech without blocking genuine callers."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Sanjeev Sharma", email = "speedsharma.ai@gmail.com" }]
+keywords = [
+    "prompt-injection", "guardrail", "voice-ai", "hinglish", "code-mixed",
+    "indic", "llm-security", "jailbreak", "ai-safety", "india",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Security",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "transformers>=4.40",
+    "torch>=2.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/speedsharmaai/dhvaniguard"
+Issues = "https://github.com/speedsharmaai/dhvaniguard/issues"
+Model = "https://huggingface.co/speedsharma/dhvaniguard-v0"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dhvaniguard"]
