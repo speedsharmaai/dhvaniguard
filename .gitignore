@@ -1,0 +1,17 @@
+# model weights live on the Hugging Face Hub, not in git
+model/
+
+# environments & caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# build artifacts
+dist/
+build/
+*.egg-info/
+
+# local logs & scratch
+*.log
