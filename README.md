@@ -30,8 +30,8 @@ languages — Hindi, Tamil, Telugu, Bengali, Marathi, and the romanized/code-mix
 forms (Hinglish, Tanglish, Tenglish, Banglish, Manglish, Kanglish, and more):
 
 - **Attack detection: 121/121 = 100%** across every language
-- **False positives: 9%** overall (the English classifier: 100% on Indic)
-- **Mean confidence: 98.2%**, and a single forward pass runs in ~30ms on CPU
+- **False positives: 5%** overall (the English classifier: 100% on Indic)
+- **Mean confidence: 99.9%**, and a single forward pass runs in ~30ms on CPU
 
 It catches the attacks and lets the real customers through — in the language they
 actually speak.
@@ -100,7 +100,7 @@ DHVANIGUARD_MODEL=model/dhvaniguard-v0 python benchmark/run_benchmark.py
 
 ## Honest limits
 
-This is an early, focused model trained on a small clean corpus. It is **not** production-hardened: real traffic has typos, ASR noise, accents, novel attack phrasings, and harder obfuscation it hasn't seen. Use it as a strong, transparent starting point — and please send failing examples as issues so the corpus grows.
+This is an early, focused model trained on a 5.2k-utterance synthetic corpus (multiple LLMs for variety, balanced across all 15 languages). It is **not** production-hardened: real traffic has typos, ASR noise, accents, novel attack phrasings, and harder obfuscation it hasn't seen. Use it as a strong, transparent starting point — and please send failing examples as issues so the corpus grows.
 
 ## License
 
